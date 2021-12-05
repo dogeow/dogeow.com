@@ -10,7 +10,7 @@ export default () => (
       <div className="p-2">{process.env.REACT_APP_NAME}</div>
       <div className="p-2">小李世界</div>
     </header>
-    <main className="max-w-md mx-auto">
+    <main className="max-w-md mx-auto space-y-8">
       <div className="text-4xl text-center">
         <span role="img">👏</span>欢迎<span role="img">👏</span>
       </div>
@@ -29,7 +29,7 @@ export default () => (
         ))}
       </nav>
     </main>
-    <footer className="flex xs:flex-col md:flex justify-center space-x-5 text-gray-400">
+    <footer className="flex flex-col md:flex-row justify-center items-center space-x-5 text-gray-400">
       <ExternalLink href={"http://www.beian.gov.cn/"}>
         <div className="flex items-center">
           <img src={Record} alt="" style={{ verticalAlign: "top" }} />
