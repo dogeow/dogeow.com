@@ -24,6 +24,7 @@ module.exports = {
   plugins: ["react", "prettier"],
   rules: {
     "react/display-name": 0,
+    "react/prop-types": 0,
     "require-jsdoc": 0,
     "prettier/prettier": "error",
   },
