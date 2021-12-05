@@ -4,7 +4,9 @@ import projects from "./projects.json";
 export default () => (
   <div className="flex min-w-full min-h-screen items-center text-sm text-gray-200 bg-random bg-cover bg-center transition-opacity duration-700">
     <header>
-      <h1 className="absolute right top-4 left-4">Doge 先锋</h1>
+      <h1 className="absolute right top-4 left-4">
+        {process.env.REACT_APP_NAME}
+      </h1>
     </header>
     <main className="max-w-sm mx-auto space-y-10">
       <div className="text-4xl text-center">
