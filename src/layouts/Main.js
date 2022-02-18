@@ -9,7 +9,7 @@ export default () => (
     <nav className="grid gap-2 grid-cols-2 md:grid-cols-4">
       {projects.map((project, index) => (
         <a
-          className="block p-4 hover:bg-gray-50 hover:bg-opacity-20 cursor-pointer"
+          className="block p-4 hover:bg-white hover:bg-opacity-20 cursor-pointer"
           href={project.link}
           key={index}
         >
