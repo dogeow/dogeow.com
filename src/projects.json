@@ -20,6 +20,16 @@
     "image": "https://upyun.dogeow.com/projects/Spider.png"
   },
   {
+    "title": "文件夹",
+    "link": "https://file.dogeow.com",
+    "image": "https://upyun.dogeow.com/projects/Cloud.png"
+  },
+  {
+    "title": "实时协作文档",
+    "link": "https://pad.dogeow.com",
+    "image": "https://upyun.dogeow.com/projects/Multi-person_Collaboration.png"
+  },
+  {
     "title": "GitHUb",
     "link": "https://github.com/likunyan",
     "image": "https://upyun.dogeow.com/projects/Octocat.svg"
