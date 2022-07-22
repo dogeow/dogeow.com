@@ -1,0 +1,42 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: yarn install
+    image: node
+    volumes:
+      - name: cache
+        path: /drone/src/node_modules
+    commands:
+      - yarn
+  - name: yarn build
+    image: node
+    volumes:
+      - name: cache
+        path: /drone/src/node_modules
+      - name: env
+        path: /drone/src/.env
+    commands:
+      - yarn build
+  - name: rsync
+    image: drillster/drone-rsync
+    settings:
+      user: root
+      key:
+        from_secret: ssh_key
+      hosts:
+        - 172.22.253.15
+      source: ./build/*
+      delete: true
+      target: /var/www/dogeow
+
+trigger:
+  event:
+    - push
+
+volumes:
+  - name: cache
+    host:
+      path: /tmp/dogeow/cache
+
