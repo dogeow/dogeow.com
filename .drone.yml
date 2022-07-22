@@ -4,14 +4,14 @@ name: default
 
 steps:
   - name: yarn install
-    image: node
+    image: node:16
     volumes:
       - name: cache
         path: /drone/src/node_modules
     commands:
       - yarn
   - name: yarn build
-    image: node
+    image: node:16
     volumes:
       - name: cache
         path: /drone/src/node_modules
