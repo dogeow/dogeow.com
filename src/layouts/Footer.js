@@ -1,7 +1,7 @@
 import React from "react";
 import ExternalLink from "../components/ExternalLink";
-import Record from "../Record";
-import TailwindCSS from "../TailwindCSS";
+import Record from "../resources/ICP";
+import TailwindCSS from "../resources/TailwindCSS";
 import FriendLink from "../components/FriendLink";
 
 export default () => (

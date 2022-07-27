@@ -1,5 +1,5 @@
 import React from "react";
-import projects from "../projects.json";
+import projects from "../resources/projects.json";
 
 export default () => (
   <main className="mx-auto space-y-8">
