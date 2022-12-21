@@ -23,11 +23,11 @@ steps:
   - name: rsync
     image: drillster/drone-rsync
     settings:
-      user: root
+      user: ecs-user
       key:
         from_secret: ssh_key
       hosts:
-        - 172.22.253.15
+        - 172.22.84.158
       source: ./build/*
       delete: true
       target: /var/www/dogeow
