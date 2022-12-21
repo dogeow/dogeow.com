@@ -9,7 +9,11 @@ import React from "react";
  * @return {JSX.Element}
  */
 export default function (props) {
-  return (
+  return props.referrer ? (
+    <a className="block" href={props.href}>
+      {props.children}
+    </a>
+  ) : (
     <a className="block" href={props.href} target="_blank" rel="noreferrer">
       {props.children}
     </a>

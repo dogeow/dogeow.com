@@ -6,7 +6,7 @@ import FriendLink from "../components/FriendLink";
 
 export default () => (
   <footer className="flex items-center flex-col text-gray-400">
-    <FriendLink className="p-2 flex md:flex-row justify-center space-x-5" />
+    <FriendLink className="p-2 flex flex-row justify-center space-x-5" />
     <div className="p-2 flex md:flex-row flex-col justify-center space-x-5">
       <ExternalLink href={"http://www.beian.gov.cn/"}>
         <div className="flex items-center">
