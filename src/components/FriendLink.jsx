@@ -11,7 +11,7 @@ export default () => (
       小菜博客
     </ExternalLink>
     <ExternalLink href={"https://www.supereggs.cn/"} referrer={true}>
-      小菜博客
+      SuperEggs
     </ExternalLink>
   </div>
 );
