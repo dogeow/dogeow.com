@@ -10,5 +10,8 @@ export default () => (
     <ExternalLink href={"http://xiaocai.streamcc.top/"} referrer={true}>
       小菜博客
     </ExternalLink>
+    <ExternalLink href={"https://www.supereggs.cn/"} referrer={true}>
+      小菜博客
+    </ExternalLink>
   </div>
 );
