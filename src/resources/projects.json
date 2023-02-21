@@ -25,13 +25,18 @@
     "image": "https://upyun.dogeow.com/projects/Cloud.png"
   },
   {
-    "title": "实时协作文档",
-    "link": "https://pad.dogeow.com",
+    "title": "知识分享",
+    "link": "https://blog.dogeow.com",
     "image": "https://upyun.dogeow.com/projects/Multi-person_Collaboration.png"
   },
   {
     "title": "GitHub",
     "link": "https://github.com/dogeow",
     "image": "https://upyun.dogeow.com/projects/Octocat.svg"
+  },
+  {
+    "title": "我的世界",
+    "link": "https://mc.dogeow.com",
+    "image": "https://upyun.dogeow.com/projects/minecraft_grass_block_texture.png"
   }
 ]

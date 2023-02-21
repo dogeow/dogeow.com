@@ -3,22 +3,12 @@ import projects from "../resources/projects.json";
 
 const todos = [
   "正在学习英语 & 锻炼身体",
-  "正在学习英语 & 锻炼身体.",
-  "正在学习英语 & 锻炼身体..",
-  "正在学习英语 & 锻炼身体...",
   "正在使用 Next.js + antd 写网址导航",
-  "正在使用 Next.js + antd 写网址导航.",
-  "正在使用 Next.js + antd 写网址导航..",
-  "正在使用 Next.js + antd 写网址导航...",
   "正在看《三体》和《电锯人》",
-  "正在看《三体》和《电锯人》.",
-  "正在看《三体》和《电锯人》..",
-  "正在看《三体》和《电锯人》...",
   "正在学习 Golang",
-  "正在学习 Golang.",
-  "正在学习 Golang..",
-  "正在学习 Golang...",
 ];
+
+const todoAndDotMaxLength = 4; // todo 加上小数点额最大长度（todo 为一个单位），比如 「正在学习 Golang...」，那么长度为 4，其中小数点最长为 3 位。
 
 export default () => {
   const [todo, setTodo] = React.useState("");
@@ -27,8 +17,16 @@ export default () => {
     const timer = setInterval(() => {
       // 时间戳，秒
       const timestamp = Math.floor(Date.now() / 1000);
-      const todo = todos[timestamp % todos.length];
-      setTodo(todo);
+      const todoRemainder = timestamp % (todos.length * todoAndDotMaxLength); // 增加的小数点也要上上去
+      const todoDotRemainder = todoRemainder % todos.length; // 第几个小数点
+      const todo = todos[parseInt((todoRemainder / todos.length).toString())]; // 第几个 todo
+      // 小数点区间
+      if (todoDotRemainder !== 0) {
+        const todoAndDot = todo + Array(todoDotRemainder).fill(".").join("");
+        setTodo(todoAndDot);
+      } else {
+        setTodo(todo);
+      }
     }, 1000);
 
     return () => {
