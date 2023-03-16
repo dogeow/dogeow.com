@@ -7,7 +7,7 @@ export default (props) => {
   const [doing, setDoing] = React.useState("");
 
   useEffect(() => {
-    if (props.doings.length === 0) {
+    if (props.doings && props.doings.length === 0) {
       return;
     }
 
@@ -33,7 +33,7 @@ export default (props) => {
     return () => {
       clearInterval(timer);
     };
-  }, [props.doings]);
+  }, []);
 
   return (
     <main className="mx-auto space-y-8">
