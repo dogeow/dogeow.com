@@ -4,9 +4,12 @@ import Record from "../resources/ICP";
 import TailwindCSS from "../resources/TailwindCSS";
 import FriendLink from "../components/FriendLink";
 
-export default () => (
+export default (props) => (
   <footer className="flex items-center flex-col text-gray-400">
-    <FriendLink className="p-2 flex flex-row justify-center space-x-5" />
+    <FriendLink
+      links={props.links}
+      className="p-2 flex flex-row justify-center space-x-5"
+    />
     <div className="p-2 flex md:flex-row flex-col justify-center space-x-5">
       <ExternalLink href={"http://www.beian.gov.cn/"}>
         <div className="flex items-center">

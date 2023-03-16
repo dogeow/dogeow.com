@@ -1,17 +1,14 @@
 import React from "react";
 import ExternalLink from "../components/ExternalLink";
 
-export default () => (
+export default (props) => (
   <div className="flex items-center space-x-2">
     <h2>友情链接：</h2>
-    <ExternalLink href={"https://www.52car.xyz"} referrer={true}>
-      李山河
-    </ExternalLink>
-    <ExternalLink href={"http://xiaocai.streamcc.top"} referrer={true}>
-      小菜博客
-    </ExternalLink>
-    <ExternalLink href={"https://www.supereggs.cn"} referrer={true}>
-      SuperEggs
-    </ExternalLink>
+    {props.links.length &&
+      props.links.map((link, index) => (
+        <ExternalLink href={link.url} referrer={true} key={index}>
+          {link.title}
+        </ExternalLink>
+      ))}
   </div>
 );
