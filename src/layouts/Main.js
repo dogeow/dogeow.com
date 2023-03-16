@@ -16,11 +16,9 @@ export default (props) => {
       const timestamp = Math.floor(Date.now() / 1000);
       const doingRemainder =
         timestamp % (props.doings.length * doingAndDotMaxLength); // 增加的小数点也要上上去
-      const doingDotRemainder = doingRemainder % props.doings.length; // 第几个小数点
+      const doingDotRemainder = doingRemainder % doingAndDotMaxLength; // 第几个小数点
       const doing =
-        props.doings[
-          parseInt((doingRemainder / props.doings.length).toString())
-        ]; // 第几个 doing
+        props.doings[Math.floor(doingRemainder / doingAndDotMaxLength)]; // 第几个 doing
       // 小数点区间
       if (doingDotRemainder !== 0) {
         const doingAndDot = doing + Array(doingDotRemainder).fill(".").join("");
@@ -33,7 +31,7 @@ export default (props) => {
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  }, [props.doings]);
 
   return (
     <main className="mx-auto space-y-8">
