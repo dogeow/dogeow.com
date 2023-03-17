@@ -22,9 +22,9 @@ export default (props) => {
       // 小数点区间
       if (doingDotRemainder !== 0) {
         const doingAndDot = doing + Array(doingDotRemainder).fill(".").join("");
-        setDoing(doingAndDot);
+        setDoing(`正在${doingAndDot}`);
       } else {
-        setDoing(doing);
+        setDoing(`正在${doing}`);
       }
     }, 1000);
 
@@ -52,7 +52,7 @@ export default (props) => {
           </a>
         ))}
       </nav>
-      <div className="flex justify-center text">正在{doing}</div>
+      <div className="flex justify-center text">{doing}</div>
     </main>
   );
 };
