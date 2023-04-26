@@ -52,7 +52,15 @@ export default (props) => {
           </a>
         ))}
       </nav>
-      <div className="flex justify-center text">{doing}</div>
+      <div className="flex justify-center text">
+        <a
+          href="https://lab.dogeow.com/projects/1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {doing}
+        </a>
+      </div>
     </main>
   );
 };
