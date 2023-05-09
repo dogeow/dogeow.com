@@ -5,8 +5,6 @@ import Footer from "./layouts/Footer";
 import useScript from "./components/useScript";
 
 export default () => {
-  useScript("https://live.dogeow.com/index.php/chn/chat/start");
-
   const [info, setInfo] = React.useState({
     doings: [],
     links: [],
@@ -30,6 +28,15 @@ export default () => {
         <Main doings={info.doings} />
         <Footer links={info.links} />
       </div>
+      <script>
+        var LHC_API = LHC_API||{};
+        LHC_API.args = {mode:'widget',lhc_base_url:'//live.dogeow.com/index.php/',wheight:450,wwidth:350,pheight:520,pwidth:500,domain:'dogeow.com',leaveamessage:true,check_messages:false,lang:'chn/'};
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.setAttribute('crossorigin','anonymous'); po.async = true;
+          var date = new Date();po.src = '//live.dogeow.com/design/defaulttheme/js/widgetv2/index.js?'+(""+date.getFullYear() + date.getMonth() + date.getDate());
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+      </script>
     </>
   );
 };
