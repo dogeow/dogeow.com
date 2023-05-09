@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import Header from "./layouts/Header";
 import Main from "./layouts/Main";
 import Footer from "./layouts/Footer";
-import UseScript from "./components/UseScript";
+import useScript from "./components/useScript";
 
 export default () => {
+  useScript("https://live.dogeow.com/index.php/chn/chat/start");
+
   const [info, setInfo] = React.useState({
     doings: [],
     links: [],
@@ -28,7 +30,6 @@ export default () => {
         <Main doings={info.doings} />
         <Footer links={info.links} />
       </div>
-      <UseScript url="//live.dogeow.com/index.php/chn/chat/start" />
     </>
   );
 };
