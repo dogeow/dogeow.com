@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Header from "./layouts/Header";
 import Main from "./layouts/Main";
 import Footer from "./layouts/Footer";
-import useScript from "./components/useScript";
 
 export default () => {
   const [info, setInfo] = React.useState({
