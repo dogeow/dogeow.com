@@ -11,8 +11,8 @@ export default function Footer(props) {
         links={props.links}
         className="p-2 flex flex-row justify-center space-x-5"
       />
-      <div className="p-2 flex md:flex-row flex-col justify-center space-x-5">
-        <div className="flex items-center space-x-1">
+      <div className="p-2 flex md:flex-row flex-col justify-center">
+        <div className="flex items-center">
           <span>Powered by</span>
           <ExternalLink href={props.tailwindCSSLink}>
             <TailwindCSS />
