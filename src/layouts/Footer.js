@@ -12,21 +12,21 @@ export default function Footer(props) {
         className="p-2 flex flex-row justify-center space-x-5"
       />
       <div className="p-2 flex md:flex-row flex-col justify-center space-x-5">
-        <ExternalLink href={"http://www.beian.gov.cn/"}>
-          <figure className="flex items-center">
-            <img src={Record} alt="备案图标" style={{ verticalAlign: "top" }} />
-            <figcaption>闽公网安备35020302033650号</figcaption>
-          </figure>
-        </ExternalLink>
-        <ExternalLink href={"https://beian.miit.gov.cn/"}>
-          闽ICP备19021694号
-        </ExternalLink>
         <div className="flex items-center space-x-1">
           <span>Powered by</span>
           <ExternalLink href={props.tailwindCSSLink}>
             <TailwindCSS />
           </ExternalLink>
         </div>
+        <ExternalLink href={"https://beian.miit.gov.cn/"}>
+          闽ICP备19021694号
+        </ExternalLink>
+        <ExternalLink href={"http://www.beian.gov.cn/"}>
+          <figure className="flex items-center">
+            <img src={Record} alt="备案图标" style={{ verticalAlign: "top" }} />
+            <figcaption>闽公网安备35020302033650号</figcaption>
+          </figure>
+        </ExternalLink>
       </div>
     </footer>
   );
