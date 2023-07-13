@@ -5,6 +5,11 @@
     "image": "https://upyun.dogeow.com/projects/DogeOW.png!/fw/80"
   },
   {
+    "title": "博客",
+    "link": "https://blog.antic.dev",
+    "image": "https://blog.antic.dev/assets/logo.svg"
+  },
+  {
     "title": "技术笔记",
     "link": "https://wiki.dogeow.com",
     "image": "https://upyun.dogeow.com/projects/Wiki_puzzle.svg"
@@ -18,6 +23,11 @@
     "title": "《PHP 爬虫》文档",
     "link": "https://spider.dogeow.com",
     "image": "https://upyun.dogeow.com/projects/Spider.png!/fw/80"
+  },
+  {
+    "title": "Canvas",
+    "link": "https://canvas.dogeow.com",
+    "image": "https://upyun.dogeow.com/projects/canvas.png!/fw/80"
   },
   {
     "title": "文件夹",
